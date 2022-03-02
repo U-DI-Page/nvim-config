@@ -1,7 +1,7 @@
 
 vim.cmd [[
   try
-    colorscheme darkblue
+    colorscheme default
   catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
     set background=dark

@@ -15,7 +15,7 @@ M.setup = function()
 
   local config = {
     -- disable virtual text
-    virtual_text = true,
+    virtual_text = false,
     -- show signs
     signs = {
       active = signs,
@@ -37,6 +37,7 @@ M.setup = function()
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
+    color = "#000"
   })
 
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
@@ -75,7 +76,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(
     bufnr,
     "n",
-    "<leader>l",
+    "gl",
     '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>',
     opts
   )

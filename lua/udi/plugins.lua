@@ -50,6 +50,8 @@ return require('packer').startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "folke/lsp-colors.nvim"
+  use 'rinx/lspsaga.nvim'
 
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions

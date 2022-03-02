@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/ronggenye/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/ronggenye/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
   ["lush.nvim"] = {
     loaded = true,
     path = "/Users/ronggenye/.local/share/nvim/site/pack/packer/start/lush.nvim",
@@ -188,6 +193,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ronggenye/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/ronggenye/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/ronggenye/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   }
 }
 
