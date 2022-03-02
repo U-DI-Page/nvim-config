@@ -14,29 +14,34 @@ end
 --   },
 -- }
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff    
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "akinsho/toggleterm.nvim"
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+
   -- use "nvim-lualine/lualine.nvim"
   use "kyazdani42/nvim-web-devicons"
 
   -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  
+
   -- gruvbox theme
   use {
-      "ellisonleao/gruvbox.nvim",
-      requires = {"rktjmp/lush.nvim"}
+    "ellisonleao/gruvbox.nvim",
+    requires = {"rktjmp/lush.nvim"}
   }
-  
+
   -- nvim-tree (新增)
   use {
-     "kyazdani42/nvim-tree.lua",
-      requires = {"kyazdani42/nvim-web-devicons"}
+    "kyazdani42/nvim-tree.lua",
+    requires = {"kyazdani42/nvim-web-devicons"}
   }
 
   -- lspconfig & cmp
@@ -45,7 +50,7 @@ return require('packer').startup(function()
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  
+
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
@@ -57,7 +62,7 @@ return require('packer').startup(function()
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  
+
   -- bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 end)
